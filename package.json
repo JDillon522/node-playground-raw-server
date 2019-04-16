@@ -2,18 +2,27 @@
   "name": "raw-server",
   "version": "0.0.1",
   "description": "A playground for node server and api development",
-  "main": "index.js",
+  "main": "app/index.js",
   "scripts": {
+    "compile": "tsc && node build/index.js",
+    "dev": "nodemon -e ts --exec \"npm run compile\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/JDillon522/node-playground-raw-server.git"
+    "url": "https://www.github.com/JDillon522/node-playground-raw-server"
   },
   "author": "jdillon",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/JDillon522/node-playground-raw-server/issues"
   },
-  "homepage": "https://github.com/JDillon522/node-playground-raw-server#readme"
+  "homepage": "https://github.com/JDillon522/node-playground-raw-server#readme",
+  "dependencies": {
+    "nodemon": "^1.18.11",
+    "typescript": "^3.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "^11.13.4"
+  }
 }
